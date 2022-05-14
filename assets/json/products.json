@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "name" : "Router TP-Link AC1200",
+      "price" : 99.99,
+      "image" : "assets/img/Router TP-Link AC1200.jpg",
+      "description" : "Con 300 Mbps en la banda de 2.4 GHz y 867 Mbps en la banda de 5 GHz, el Archer C1200 es la opción superior para la transmisión de HD sin problemas"
+    },
+    {
+      "name" : "Router Tenda AC6",
+      "price" : 26.09,
+      "image" : "assets/img/Router Tenda AC6.jpg",
+      "description" : "El AC6 es un Router WiFi de doble banda inteligente que proporciona una potente señal y un rendimiento estable."
+    },
+    {
+      "name" : "Switch TP-Link TL-SG105",
+      "price" : 3.90,
+      "image" : "assets/img/Switch TP-Link TL-SG105.jpg",
+      "description" : "El Switch Sobremesa TL-SG105 te proporciona una maera fácil de aumentar la velocidad de la red al servidor"
+    },
+    {
+      "name" : "EPSON Workforce ES-50",
+      "price" : 108.83,
+      "image" : "assets/img/EPSON Workforce ES-50.jpg",
+      "description" : "El nuevo software ScanSmart de Epson permite escanear sin esfuerzo de la forma deseada, brindando una solución de escaneado paso a paso"
+    },
+    {
+      "name" : "ScanMarker Air",
+      "price" : 119.00,
+      "image" : "assets/img/ScanMarker Air.jpg",
+      "description" : "Scanmarker Air se caracteriza por un diseño ultraportátil que te permite escanear sin cables a través de la conexión Bluetooth a tu ordenador"
+    },
+    {
+      "name" : "Apple iPad Air 16GB",
+      "price" : 269.89,
+      "image" : "assets/img/Apple iPad Air 16GB.jpg",
+      "description" : "iPad Air 16 GB WiFi gris espacial. Tablet. Tamaño de pantalla (\") : 9,7 \". Tipo de procesador : A7. Procesador : Apple A7 - 64 bits."
+    },
+    {
+      "name" : "Echo Show 5",
+      "price" : 80.99,
+      "image" : "assets/img/Echo Show 5.jpg",
+      "description" : "Echo Show 5 (2.ª generación, modelo de 2021) | Pantalla inteligente con Alexa y cámara de 2 MP | Antracita."
+    },
+    {
+      "name" : "Echo Dot",
+      "price" : 44.99,
+      "image" : "assets/img/Echo Dot.jpg",
+      "description" : "El Echo Dot es un altavoz inteligente que se controla con la voz y que usa el Alexa Voice Service. Gracias a su diseño, es ideal para cualquier habitación."
+    },
+    {
+      "name" : "Google Nest Hub",
+      "price" : 94.06,
+      "image" : "assets/img/Google Nest Hub.jpg",
+      "description" : "Presentamos el nuevo Nest Hub, el pilar de la casa que te ayuda. Solo con un toque, o la voz, controla miles de dispositivos inteligentes compatibles"
+    },
+    {
+      "name" : "Oculus Quest",
+      "price" : 549.00,
+      "image" : "assets/img/Oculus Quest.jpg",
+      "description" : "En Quest te esperan cientos de juegos populares, experiencias únicas, eventos en directo, nuevas maneras de mantenerse en forma y una comunidad floreciente"
+    }
+  ]
+}
