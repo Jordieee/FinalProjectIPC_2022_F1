@@ -1,8 +1,8 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:final_project_ipc/pages/list_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:final_project_ipc/pages/waiting_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
             _Body(),
             const Spacer(flex: 1),
             _Footer(context),
-            const Spacer(flex: 10),
+            const Spacer(flex: 200),
           ]),
         ),
       ]),
@@ -116,7 +116,7 @@ SizedBox _Body() {
           const Spacer(flex: 2),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Password()
             ],
           ),
@@ -196,7 +196,7 @@ class _ButtonState extends State<Button> {
             pressed = true;
           });
           var route = MaterialPageRoute(
-            builder: (context) => ListPage(),
+            builder: (context) => WaitPage(),
           );
           Navigator.of(context).push(route);
         },

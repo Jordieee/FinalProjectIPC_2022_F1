@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:final_project_ipc/model/list_model.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,15 @@ class ListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Products'),
-          backgroundColor: Colors.indigo,
+          backgroundColor: Colors.black,
+          automaticallyImplyLeading: false,
+          title: Image.asset(
+            'assets/img/f1store.png',
+            width: 200,
+            height: 30,
+            fit: BoxFit.cover,
+          ),
+
         ),
         body: const FutureList());
   }
