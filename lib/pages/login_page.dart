@@ -117,35 +117,60 @@ SizedBox _Body() {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                  width: 300,
-                  child: TextField(
-                    obscureText: true,
-                    cursorColor: Colors.black,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white,
-                      filled: true,
-                      labelText: "Enter your password",
-                      labelStyle: const TextStyle(
-                          color: Colors.grey
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            width: 2, color: Colors.black),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                            width: 2, color: Colors.red),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                  ))
+              Password()
             ],
           ),
           const Spacer(flex: 4),
         ],
       ));
+}
+
+class Password extends StatefulWidget {
+  const Password({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<Password> createState() => _PasswordState();
+}
+
+class _PasswordState extends State<Password> {
+  bool icon = false;
+  bool obscure = true;
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+        width: 300,
+        child: TextField(
+          obscureText: obscure,
+          cursorColor: Colors.black,
+          decoration: InputDecoration(
+            fillColor: Colors.white,
+            filled: true,
+            suffixIcon: TextButton.icon(
+                label: const Text(''),
+                icon: icon ? const Icon(Icons.remove_red_eye_outlined, color: Colors.black,) : const Icon(Icons.remove_red_eye, color: Colors.black,),
+                onPressed: () { setState(() {
+                  icon = !icon;
+                  obscure = !obscure;
+                }); },),
+            labelText: "Enter your password",
+            labelStyle: const TextStyle(
+                color: Colors.grey
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(
+                  width: 2, color: Colors.black),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(
+                  width: 2, color: Colors.red),
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+        ));
+  }
 }
 
 Widget _Footer(BuildContext context) {
@@ -190,37 +215,3 @@ class _ButtonState extends State<Button> {
   }
 }
 
-
-/*
-return SizedBox(
-width: double.infinity,
-height: 100,
-child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-GestureDetector(
-child: Container(
-width: 150,
-height: 45,
-decoration: const BoxDecoration(
-color: Colors.red,
-borderRadius: BorderRadius.all(Radius.circular(10)),
-),
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: const [
-Text('SIGN IN',
-style: TextStyle(
-fontSize: 20,
-fontFamily: 'F1',
-color: Colors.white,
-))
-])),
-onTap: () {
-
-var route = MaterialPageRoute(
-builder: (context) => ListPage(),
-);
-Navigator.of(context).push(route);
-},
-)
-]));
-*/
