@@ -1,5 +1,4 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:final_project_ipc/model/list_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -31,12 +30,12 @@ class WaitPage extends StatelessWidget {
             ),
           ),
           Container(
-            width: double.infinity,
             height: 300,
+            padding: const EdgeInsets.all(15.0),
             child: Center(
               child: DefaultTextStyle(
                 style: const TextStyle(
-                  fontSize: 50.0,
+                  fontSize: 40.0,
                   fontFamily: 'F1',
                 ),
                 child: AnimatedTextKit(

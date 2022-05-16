@@ -149,7 +149,7 @@ class _PasswordState extends State<Password> {
             filled: true,
             suffixIcon: TextButton.icon(
                 label: const Text(''),
-                icon: icon ? const Icon(Icons.remove_red_eye_outlined, color: Colors.black,) : const Icon(Icons.remove_red_eye, color: Colors.black,),
+                icon: icon ? const Icon(Icons.remove_red_eye, color: Colors.black,) : const Icon(Icons.visibility_off, color: Colors.black,),
                 onPressed: () { setState(() {
                   icon = !icon;
                   obscure = !obscure;
