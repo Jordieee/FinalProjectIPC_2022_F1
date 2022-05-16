@@ -6,7 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:final_project_ipc/pages/product_details.dart';
 
 class ListPage extends StatelessWidget {
-  const ListPage({Key? key}) : super(key: key);
+  ListPage({
+    Key? key,
+    required this.username,
+    required this.password,
+  }) : super(key: key);
+
+  String username, password;
 
   @override
   Widget build(BuildContext context) {

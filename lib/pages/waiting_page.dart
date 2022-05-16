@@ -5,7 +5,13 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:final_project_ipc/pages/list_page.dart';
 
 class WaitPage extends StatelessWidget {
-  const WaitPage({Key? key}) : super(key: key);
+  WaitPage({
+    Key? key,
+    required this.username,
+    required this.password,
+  }) : super(key: key);
+
+  String username, password;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +51,7 @@ class WaitPage extends StatelessWidget {
                       speed: const Duration(milliseconds: 100),
                     ),
                     TyperAnimatedText(
-                      'We are so happy to see you (username)',
+                      'We are so happy to see you ' + username,
                       speed: const Duration(milliseconds: 100),
                     ),
                     TyperAnimatedText(
@@ -56,7 +62,7 @@ class WaitPage extends StatelessWidget {
                   totalRepeatCount: 1,
                   onFinished: () {
                     var route = MaterialPageRoute(
-                      builder: (context) => ListPage(),
+                      builder: (context) => ListPage(username: username, password: password,),
                     );
                     Navigator.of(context).push(route);
                   },

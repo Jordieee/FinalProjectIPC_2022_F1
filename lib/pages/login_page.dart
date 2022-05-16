@@ -7,6 +7,8 @@ import 'package:final_project_ipc/pages/waiting_page.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
 
+  static String username="";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +64,8 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-SizedBox _Body() {
+Widget _Body() {
+
   return SizedBox(
       width: 325,
       height: 230,
@@ -84,6 +87,9 @@ SizedBox _Body() {
               SizedBox(
                   width: 300,
                   child: TextField(
+                    onChanged: (newUsername) {
+                      LoginPage.username = newUsername;
+                    },
                     obscureText: false,
                     cursorColor: Colors.black,
                     decoration: InputDecoration(
@@ -137,11 +143,17 @@ class Password extends StatefulWidget {
 class _PasswordState extends State<Password> {
   bool icon = false;
   bool obscure = true;
+  static String password="";
+
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
         width: 300,
         child: TextField(
+          onChanged: (newPassword){
+             password = newPassword;
+          },
           obscureText: obscure,
           cursorColor: Colors.black,
           decoration: InputDecoration(
@@ -196,7 +208,7 @@ class _ButtonState extends State<Button> {
             pressed = true;
           });
           var route = MaterialPageRoute(
-            builder: (context) => WaitPage(),
+            builder: (context) => WaitPage(username: LoginPage.username, password: _PasswordState.password,),
           );
           Navigator.of(context).push(route);
         },
