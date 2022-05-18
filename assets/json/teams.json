@@ -1,0 +1,44 @@
+{
+  "teams": [
+    {
+      "team" : "Mercedes",
+      "image" : "assets/img/mercedes.jpg"
+    },
+    {
+      "team" : "Red Bull",
+      "image" : "assets/img/redbull.jpg"
+    },
+    {
+      "team" : "Ferrari",
+      "image" : "assets/img/ferrari.png"
+    },
+    {
+      "team" : "Alpine",
+      "image" : "assets/img/Mercedes.jpg"
+    },
+    {
+      "team" : "McLaren",
+      "image" : "assets/img/mclaren.jpg"
+    },
+    {
+      "team" : "Alpha Romeo",
+      "image" : "assets/img/Mercedes.jpg"
+    },
+    {
+      "team" : "Mercedes",
+      "image" : "assets/img/Mercedes.jpg"
+    },
+    {
+      "team" : "Mercedes",
+      "image" : "assets/img/Mercedes.jpg"
+    },
+    {
+      "team" : "Mercedes",
+      "image" : "assets/img/Mercedes.jpg"
+    },
+    {
+      "team" : "Mercedes",
+      "image" : "assets/img/Mercedes.jpg"
+    }
+  ]
+}

@@ -5,6 +5,8 @@ import 'package:final_project_ipc/model/list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project_ipc/pages/product_details.dart';
 
+import '../model/teams_model.dart';
+
 class ListPage extends StatelessWidget {
   ListPage({
     Key? key,
@@ -26,9 +28,18 @@ class ListPage extends StatelessWidget {
             height: 30,
             fit: BoxFit.cover,
           ),
-
         ),
-        body: const FutureList());
+        body: Stack(children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/img/f1.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          const FutureList()
+        ]));
   }
 }
 
@@ -38,53 +49,33 @@ class FutureList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: DefaultAssetBundle.of(context)
-          .loadString("assets/json/products.json"),
+      future:
+          DefaultAssetBundle.of(context).loadString("assets/json/teams.json"),
       builder: (context, AsyncSnapshot<String> snapshot) {
         if (snapshot.hasData) {
           Map<String, dynamic> data = json.decode(snapshot.data!);
-          var products = Products.fromJson(data);
-          final list = products.products.map((products) {
-            return Column(children: [
-              const Divider(),
-              ListTile(
-                trailing: const Icon(Icons.chevron_right,
-                    color: Colors.grey, size: 50.0),
-                title: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(products.name),
-                      Text(
-                        "${products.price}€",
-                        style: const TextStyle(color: Colors.grey),
-                      ),
-                    ]),
-                leading: Hero(
-                    tag: "image_${products.image}",
-                    child: Image.asset(
-                      products.image,
-                      width: 100,
-                      height: 100,
-                    )),
-                onTap: () {
-                  var route = MaterialPageRoute(
-                    builder: (context) => ProductDetailsPage(
-                      name: products.name,
-                      price: products.price,
-                      description: products.description,
-                      image: products.image,
-                      heroTag: "image_${products.image}",
-                    ),
-                  );
-                  Navigator.of(context).push(route);
-                },
+          var teams = Teams.fromJson(data);
+          final list = teams.teams.map((teams) {
+            return IconButton(
+
+              onPressed: () {  },
+              icon: Hero(
+                tag: "image_${teams.image}",
+                child: Image.asset(teams.image),
+
+
               ),
-            ]);
+
+            );
           }).toList();
 
-          return ListView.builder(
+          return GridView.builder(
             itemCount: list.length,
             itemBuilder: (context, i) => list[i],
+            gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 5,
+              crossAxisSpacing: 5.0,
+              mainAxisSpacing: 5.0,),
           );
         } else {
           return const LinearProgressIndicator();
