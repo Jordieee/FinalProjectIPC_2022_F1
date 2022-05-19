@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ui';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:final_project_ipc/model/list_model.dart';
@@ -22,12 +23,14 @@ class ListPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black,
           automaticallyImplyLeading: false,
-          title: Image.asset(
-            'assets/img/f1store.png',
-            width: 200,
-            height: 30,
-            fit: BoxFit.cover,
-          ),
+          title: Row(children: [
+            Image.asset(
+              'assets/img/f1store.png',
+              width: 200,
+              height: 30,
+              fit: BoxFit.cover,
+            ),
+          ]),
         ),
         body: Stack(children: [
           Container(
@@ -57,25 +60,27 @@ class FutureList extends StatelessWidget {
           var teams = Teams.fromJson(data);
           final list = teams.teams.map((teams) {
             return IconButton(
-
-              onPressed: () {  },
-              icon: Hero(
-                tag: "image_${teams.image}",
-                child: Image.asset(teams.image),
-
-
-              ),
-
-            );
+                onPressed: () {},
+                icon: Hero(
+                    tag: "image_${teams.image}",
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.white, width: 2),
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage(teams.image))),
+                    )));
           }).toList();
 
           return GridView.builder(
             itemCount: list.length,
             itemBuilder: (context, i) => list[i],
-            gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 5,
-              crossAxisSpacing: 5.0,
-              mainAxisSpacing: 5.0,),
+            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 200,
+                childAspectRatio: 3 / 2,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20),
           );
         } else {
           return const LinearProgressIndicator();

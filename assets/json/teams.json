@@ -10,11 +10,11 @@
     },
     {
       "team" : "Ferrari",
-      "image" : "assets/img/ferrari.png"
+      "image" : "assets/img/ferrari.jpg"
     },
     {
       "team" : "Alpine",
-      "image" : "assets/img/Mercedes.jpg"
+      "image" : "assets/img/alpine.PNG"
     },
     {
       "team" : "McLaren",
@@ -22,23 +22,23 @@
     },
     {
       "team" : "Alpha Romeo",
-      "image" : "assets/img/Mercedes.jpg"
+      "image" : "assets/img/alpha.png"
     },
     {
-      "team" : "Mercedes",
-      "image" : "assets/img/Mercedes.jpg"
+      "team" : "Alpha Tauri",
+      "image" : "assets/img/tauri.jpg"
     },
     {
-      "team" : "Mercedes",
-      "image" : "assets/img/Mercedes.jpg"
+      "team" : "Williams",
+      "image" : "assets/img/williams.jpg"
     },
     {
-      "team" : "Mercedes",
-      "image" : "assets/img/Mercedes.jpg"
+      "team" : "Haas",
+      "image" : "assets/img/haas.jpg"
     },
     {
-      "team" : "Mercedes",
-      "image" : "assets/img/Mercedes.jpg"
+      "team" : "Aston Martin",
+      "image" : "assets/img/aston.jpg"
     }
   ]
 }
