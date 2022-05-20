@@ -6,7 +6,7 @@ import 'package:final_project_ipc/model/list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project_ipc/pages/product_details.dart';
 import 'package:animated_button/animated_button.dart';
-import '../model/teams_model.dart';
+import 'package:final_project_ipc/model/teams_model.dart';
 
 class ListPage extends StatelessWidget {
   ListPage({
@@ -71,7 +71,35 @@ class FutureList extends StatelessWidget {
           final list = teams.teams.map((teams) {
             return AnimatedButton(
               shadowDegree: ShadowDegree.dark,
-                onPressed: () {},
+                onPressed: () {
+                  Team team= Team(
+                    name: teams.name,
+                    image: teams.image,
+
+                    shirtimage: teams.shirtimage,
+                    shirtdesc: teams.shirtdesc,
+                    shirtprice: teams.shirtprice,
+
+                    capimage: teams.capimage,
+                    capdesc: teams.capdesc,
+                    capprice: teams.capprice,
+
+                    helmetimage: teams.helmetimage,
+                    helmetdesc: teams.helmetdesc,
+                    helmetprice: teams.helmetprice,
+
+                    carimage: teams.carimage,
+                    cardesc: teams.cardesc,
+                    carprice: teams.carprice,
+                  );
+                  var route = MaterialPageRoute(
+                    builder: (context) => ProductDetailsPage(
+                      heroTag: "image_${teams.image}",
+                      team: team,
+                    ),
+                  );
+                  Navigator.of(context).push(route);
+                },
                 height: 120,
                 width: 185,
                 child: Hero(

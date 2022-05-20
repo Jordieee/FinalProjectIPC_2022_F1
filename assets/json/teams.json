@@ -1,44 +1,204 @@
 {
   "teams": [
     {
-      "team" : "Mercedes",
-      "image" : "assets/img/mercedes.jpg"
+      "name" : "Mercedes",
+      "image" : "assets/img/mercedes.jpg",
+
+      "shirtimage" : "assets/img/mercedesshirt.jpg",
+      "shirtdesc" : "The Best Mercedes Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/mercedescap.jpg",
+      "capdesc" : "The Best Mercedes Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/mercedeshelmet.JPG",
+      "helmetdesc" : "The Best Mercedes Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/mercedescar.JPG",
+      "cardesc" : "The Best Mercedes Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Red Bull",
-      "image" : "assets/img/redbull.jpg"
+      "name" : "Red Bull",
+      "image" : "assets/img/redbull.jpg",
+
+      "shirtimage" : "assets/img/redbullshirt.jpg",
+      "shirtdesc" : "The Best RedBull Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/redbullcap.jpg",
+      "capdesc" : "The Best RedBull Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/redbullhelmet.jpg",
+      "helmetdesc" : "The Best RedBull Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/redbullcar.jpg",
+      "cardesc" : "The Best RedBull Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Ferrari",
-      "image" : "assets/img/ferrari.jpg"
+      "name" : "Ferrari",
+      "image" : "assets/img/ferrari.jpg",
+
+      "shirtimage" : "assets/img/ferrarishirt.jpg",
+      "shirtdesc" : "The Best Ferrari Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/ferraricap.jpg",
+      "capdesc" : "The Best Ferrari Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/ferrarihelmet.jpg",
+      "helmetdesc" : "The Best Ferrari Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/ferraricar.JPG",
+      "cardesc" : "The Best Ferrari Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Alpine",
-      "image" : "assets/img/alpine.PNG"
+      "name" : "Alpine",
+      "image" : "assets/img/alpine.PNG",
+
+      "shirtimage" : "assets/img/alpineshirt.JPG",
+      "shirtdesc" : "The Best Alpine Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/alpinecap.JPG",
+      "capdesc" : "The Best Alpine Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/alpinehelmet.jpg",
+      "helmetdesc" : "The Best Alpine Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/alpinecar.jpg",
+      "cardesc" : "The Best Alpine Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "McLaren",
-      "image" : "assets/img/mclaren.jpg"
+      "name" : "McLaren",
+      "image" : "assets/img/mclaren.PNG",
+
+      "shirtimage" : "assets/img/mclarenshirt.JPG",
+      "shirtdesc" : "The Best McLaren Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/mclarencap.JPG",
+      "capdesc" : "The Best McLaren Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/mclarenhelmet.jpg",
+      "helmetdesc" : "The Best McLaren Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/mclarencar.jpg",
+      "cardesc" : "The Best McLaren Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Alpha Romeo",
-      "image" : "assets/img/alpha.png"
+      "name" : "Alpha Romeo",
+      "image" : "assets/img/alpha.png",
+
+      "shirtimage" : "assets/img/alpharomeoshirt.JPG",
+      "shirtdesc" : "The Best AlphaRomeo Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/alpharomeocap.JPG",
+      "capdesc" : "The Best AlphaRomeo Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/alpharomeohelmet.jpg",
+      "helmetdesc" : "The Best AlphaRomeo Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/alpharomeocar.jpg",
+      "cardesc" : "The Best AlphaRomeo Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Alpha Tauri",
-      "image" : "assets/img/tauri.jpg"
+      "name" : "Alpha Tauri",
+      "image" : "assets/img/tauri.jpg",
+
+      "shirtimage" : "assets/img/alphataurishirt.jpg",
+      "shirtdesc" : "The Best AlphaTauri Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/alphatauricap.jpg",
+      "capdesc" : "The Best AlphaTauri Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/alphataurihelmet.jpg",
+      "helmetdesc" : "The Best AlphaTauri Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/alphatauricar.jpg",
+      "cardesc" : "The Best AlphaTauri Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Williams",
-      "image" : "assets/img/williams.jpg"
+      "name" : "Williams",
+      "image" : "assets/img/williams.jpg",
+
+      "shirtimage" : "assets/img/williamsshirt.jpg",
+      "shirtdesc" : "The Best Williams Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/williamscap.jpg",
+      "capdesc" : "The Best Williams Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/williamshelmet.jpg",
+      "helmetdesc" : "The Best Williams Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/williamscar.jpg",
+      "cardesc" : "The Best Williams Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Haas",
-      "image" : "assets/img/haas.jpg"
+      "name" : "Haas",
+      "image" : "assets/img/haas.jpg",
+
+      "shirtimage" : "assets/img/haasshirt.jpg",
+      "shirtdesc" : "The Best Haas Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/haascap.jpg",
+      "capdesc" : "The Best Haas Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/haashelmet.jpg",
+      "helmetdesc" : "The Best Haas Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/haascar.jpg",
+      "cardesc" : "The Best Haas Car",
+      "carprice" : "19.99€"
     },
     {
-      "team" : "Aston Martin",
-      "image" : "assets/img/aston.jpg"
+      "name" : "Aston Martin",
+      "image" : "assets/img/aston.jpg",
+
+      "shirtimage" : "assets/img/astonmartinshirt.jpg",
+      "shirtdesc" : "The Best AstonMartin Shirt",
+      "shirtprice" : "99.99€",
+
+      "capimage" : "assets/img/astonmartincap.jpg",
+      "capdesc" : "The Best AstonMartin Cap",
+      "capprice" : "59.99€",
+
+      "helmetimage" : "assets/img/astonmartinhelmet.jpg",
+      "helmetdesc" : "The Best AstonMartin Helmet",
+      "helmetprice" : "39.99€",
+
+      "carimage" : "assets/img/astonmartincar.jpg",
+      "cardesc" : "The Best AstonMartin Car",
+      "carprice" : "19.99€"
     }
   ]
 }
