@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:animated_button/animated_button.dart';
 
@@ -47,7 +49,10 @@ class ProductDetailsPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.8),
+                    color: Colors.black.withOpacity(0.8),
+                    spreadRadius: 10,
+                    blurRadius: 5,
+                    offset: const Offset(0.0, 4.0),
                   ),
                 ],
               ),
@@ -55,7 +60,8 @@ class ProductDetailsPage extends StatelessWidget {
                   Products(team: team)
 
             ),
-          )
+          ),
+
         ]));
   }
 }
@@ -76,35 +82,190 @@ class Products extends StatelessWidget {
         Column(
           children: [
             Image.asset(team.shirtimage, width: 400, height: 400,),
-            Text(team.shirtdesc),
-            Text(team.shirtprice),
-            AnimatedButton(onPressed: () {  }, child: Text("Add to cart"),)
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              "'' " + team.shirtdesc + " ''",
+              style: const TextStyle(
+                color: Colors.black,
+                  fontStyle: FontStyle.italic,
+
+            ),),
+            SizedBox(height: 10,),
+
+            Row(
+              children: [
+                Text(
+                  team.shirtprice,
+                  style: const TextStyle(
+                    color: Colors.red,
+                    fontFamily: 'F1',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30
+                ),),
+                SizedBox(width: 20,),
+                AnimatedButton(
+                color: Colors.black,
+                onPressed: () {  },
+                child:
+                Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: const [
+                      Icon(Icons.shopping_cart_outlined, color: Colors.white, size: 40,),
+                      Text(
+                        "Add to cart",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'F1',
+                            fontSize: 20
+                        ),
+
+                      )]
+                ),),]
+            )
           ],
         ),
+        SizedBox(width: 24,),
         Column(
           children: [
             Image.asset(team.capimage, width: 400, height: 400,),
-            Text(team.capdesc),
-            Text(team.capprice),
-            AnimatedButton(onPressed: () {  }, child: Text("Add to cart"),)
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              "'' " + team.capdesc + " ''",
+              style: const TextStyle(
+                color: Colors.black,
+                fontStyle: FontStyle.italic,
+
+              ),),
+            SizedBox(height: 10,),
+
+            Row(
+                children: [
+                  Text(
+                    team.capprice,
+                    style: const TextStyle(
+                        color: Colors.red,
+                        fontFamily: 'F1',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30
+                    ),),
+                  SizedBox(width: 20,),
+                  AnimatedButton(
+                    color: Colors.black,
+                    onPressed: () {  },
+                    child:
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          Icon(Icons.shopping_cart_outlined, color: Colors.white, size: 40,),
+                          Text(
+                            "Add to cart",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'F1',
+                                fontSize: 20
+                            ),
+
+                          )]
+                    ),),]
+            )
           ],
         ),
+        SizedBox(width: 24,),
         Column(
           children: [
             Image.asset(team.helmetimage, width: 400, height: 400,),
-            Text(team.helmetdesc),
-            Text(team.helmetprice),
-            AnimatedButton(onPressed: () {  }, child: Text("Add to cart"),)
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              "'' " + team.helmetdesc + " ''",
+              style: const TextStyle(
+                color: Colors.black,
+                fontStyle: FontStyle.italic,
+
+              ),),
+            SizedBox(height: 10,),
+
+            Row(
+                children: [
+                  Text(
+                    team.helmetprice,
+                    style: const TextStyle(
+                        color: Colors.red,
+                        fontFamily: 'F1',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30
+                    ),),
+                  SizedBox(width: 20,),
+                  AnimatedButton(
+                    color: Colors.black,
+                    onPressed: () {  },
+                    child:
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          Icon(Icons.shopping_cart_outlined, color: Colors.white, size: 40,),
+                          Text(
+                            "Add to cart",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'F1',
+                                fontSize: 20
+                            ),
+
+                          )]
+                    ),),]
+            )
           ],
         ),
+        SizedBox(width: 24,),
         Column(
           children: [
             Image.asset(team.carimage, width: 400, height: 400,),
-            Text(team.cardesc),
-            Text(team.carprice),
-            AnimatedButton(onPressed: () {  }, child: Text("Add to cart"),)
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              "'' " + team.cardesc + " ''",
+              style: const TextStyle(
+                color: Colors.black,
+                fontStyle: FontStyle.italic,
+
+              ),),
+            SizedBox(height: 10,),
+
+            Row(
+                children: [
+                  Text(
+                    team.carprice,
+                    style: const TextStyle(
+                        color: Colors.red,
+                        fontFamily: 'F1',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30
+                    ),),
+                  SizedBox(width: 20,),
+                  AnimatedButton(
+                    color: Colors.black,
+                    onPressed: () {  },
+                    child:
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          Icon(Icons.shopping_cart_outlined, color: Colors.white, size: 40,),
+                          Text(
+                            "Add to cart",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'F1',
+                                fontSize: 20
+                            ),
+
+                          )]
+                    ),),]
+            )
           ],
-        )
+        ),
       ],
 
     );

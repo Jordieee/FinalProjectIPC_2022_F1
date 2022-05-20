@@ -30,16 +30,22 @@ class ListPage extends StatelessWidget {
               height: 30,
               fit: BoxFit.cover,
             ),
-            const Spacer(flex: 1,),
+            const Spacer(
+              flex: 1,
+            ),
             IconButton(
-              iconSize: 40 ,
+              iconSize: 40,
               icon: const Icon(Icons.person, color: Colors.white),
               onPressed: () {
                 var route = MaterialPageRoute(
-                  builder: (context) => ProfilePage(username: username, password: password,),
+                  builder: (context) => ProfilePage(
+                    username: username,
+                    password: password,
+                  ),
                 );
                 Navigator.of(context).push(route);
-              },)
+              },
+            )
           ]),
         ),
         body: Stack(children: [
@@ -51,7 +57,21 @@ class ListPage extends StatelessWidget {
               ),
             ),
           ),
-          const FutureList()
+          const FutureList(),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: 70,
+              height: 70,
+              decoration:
+                  BoxDecoration(color: Colors.black, shape: BoxShape.circle, ),
+              child: IconButton(
+                iconSize: 40,
+                icon: Icon(Icons.shopping_cart_outlined, color: Colors.white,),
+                onPressed: () {},
+              ),
+            ),
+          )
         ]));
   }
 }
@@ -69,49 +89,47 @@ class FutureList extends StatelessWidget {
           Map<String, dynamic> data = json.decode(snapshot.data!);
           var teams = Teams.fromJson(data);
           final list = teams.teams.map((teams) {
-            return AnimatedButton(
-              shadowDegree: ShadowDegree.dark,
-                onPressed: () {
-                  Team team= Team(
-                    name: teams.name,
-                    image: teams.image,
-
-                    shirtimage: teams.shirtimage,
-                    shirtdesc: teams.shirtdesc,
-                    shirtprice: teams.shirtprice,
-
-                    capimage: teams.capimage,
-                    capdesc: teams.capdesc,
-                    capprice: teams.capprice,
-
-                    helmetimage: teams.helmetimage,
-                    helmetdesc: teams.helmetdesc,
-                    helmetprice: teams.helmetprice,
-
-                    carimage: teams.carimage,
-                    cardesc: teams.cardesc,
-                    carprice: teams.carprice,
-                  );
-                  var route = MaterialPageRoute(
-                    builder: (context) => ProductDetailsPage(
-                      heroTag: "image_${teams.image}",
-                      team: team,
-                    ),
-                  );
-                  Navigator.of(context).push(route);
-                },
-                height: 120,
-                width: 185,
-                child: Hero(
-                    tag: "image_${teams.image}",
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Colors.white, width: 2),
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: AssetImage(teams.image))),
-                    )));
+            return Center(
+              child: AnimatedButton(
+                  shadowDegree: ShadowDegree.dark,
+                  onPressed: () {
+                    Team team = Team(
+                      name: teams.name,
+                      image: teams.image,
+                      shirtimage: teams.shirtimage,
+                      shirtdesc: teams.shirtdesc,
+                      shirtprice: teams.shirtprice,
+                      capimage: teams.capimage,
+                      capdesc: teams.capdesc,
+                      capprice: teams.capprice,
+                      helmetimage: teams.helmetimage,
+                      helmetdesc: teams.helmetdesc,
+                      helmetprice: teams.helmetprice,
+                      carimage: teams.carimage,
+                      cardesc: teams.cardesc,
+                      carprice: teams.carprice,
+                    );
+                    var route = MaterialPageRoute(
+                      builder: (context) => ProductDetailsPage(
+                        heroTag: "image_${teams.image}",
+                        team: team,
+                      ),
+                    );
+                    Navigator.of(context).push(route);
+                  },
+                  height: 120,
+                  width: 185,
+                  child: Hero(
+                      tag: "image_${teams.image}",
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.white, width: 2),
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage(teams.image))),
+                      ))),
+            );
           }).toList();
 
           return GridView.builder(
