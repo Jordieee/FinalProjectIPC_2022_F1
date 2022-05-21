@@ -80,7 +80,7 @@ class Products extends StatelessWidget {
               width: 400,
               height: 400,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
@@ -90,19 +90,19 @@ class Products extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(children: [
               Text(
-                team.shirtprice,
+                team.shirtprice+"€",
                 style: const TextStyle(
                     color: Colors.red,
                     fontFamily: 'F1',
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               AnimatedButton(
@@ -130,7 +130,7 @@ class Products extends StatelessWidget {
             ])
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 24,
         ),
         Column(
@@ -140,7 +140,7 @@ class Products extends StatelessWidget {
               width: 400,
               height: 400,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
@@ -150,19 +150,19 @@ class Products extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(children: [
               Text(
-                team.capprice,
+                team.capprice+"€",
                 style: const TextStyle(
                     color: Colors.red,
                     fontFamily: 'F1',
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               AnimatedButton(
@@ -190,7 +190,7 @@ class Products extends StatelessWidget {
             ])
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 24,
         ),
         Column(
@@ -200,7 +200,7 @@ class Products extends StatelessWidget {
               width: 400,
               height: 400,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
@@ -210,19 +210,19 @@ class Products extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(children: [
               Text(
-                team.helmetprice,
+                team.helmetprice+"€",
                 style: const TextStyle(
                     color: Colors.red,
                     fontFamily: 'F1',
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               AnimatedButton(
@@ -250,7 +250,7 @@ class Products extends StatelessWidget {
             ])
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 24,
         ),
         Column(
@@ -260,7 +260,7 @@ class Products extends StatelessWidget {
               width: 400,
               height: 400,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
@@ -270,19 +270,19 @@ class Products extends StatelessWidget {
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(children: [
               Text(
-                team.carprice,
+                team.carprice+"€",
                 style: const TextStyle(
                     color: Colors.red,
                     fontFamily: 'F1',
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               AnimatedButton(

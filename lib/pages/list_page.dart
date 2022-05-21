@@ -70,7 +70,7 @@ class ListPage extends StatelessWidget {
                 child: const Icon(Icons.shopping_cart_outlined, color: Colors.white, size: 30,),
                 onPressed: () {
                   var route = MaterialPageRoute(
-                    builder: (context) => ShopPage()
+                    builder: (context) => ShopPage(image: "",desc: "",price: "")
                   );
                   Navigator.of(context).push(route);
                   },
