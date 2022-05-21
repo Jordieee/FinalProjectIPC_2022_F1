@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:ui';
 import 'package:final_project_ipc/pages/profile_page.dart';
+import 'package:final_project_ipc/pages/shop_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:final_project_ipc/model/list_model.dart';
 import 'package:flutter/material.dart';
@@ -61,14 +62,19 @@ class ListPage extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              width: 70,
-              height: 70,
-              decoration:
-                  BoxDecoration(color: Colors.black, shape: BoxShape.circle, ),
-              child: IconButton(
-                iconSize: 40,
-                icon: Icon(Icons.shopping_cart_outlined, color: Colors.white,),
-                onPressed: () {},
+              margin: const EdgeInsets.all(8.0),
+              child: AnimatedButton(
+                color: Colors.black,
+                width: 60,
+                height: 60,
+                child: const Icon(Icons.shopping_cart_outlined, color: Colors.white, size: 30,),
+                onPressed: () {
+                  var route = MaterialPageRoute(
+                    builder: (context) => ShopPage()
+                  );
+                  Navigator.of(context).push(route);
+                  },
+
               ),
             ),
           )
